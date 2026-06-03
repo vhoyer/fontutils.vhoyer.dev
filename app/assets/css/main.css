@@ -3,4 +3,28 @@
 
 @theme {
   --font-sans: 'Quicksand', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+:root {
+  --bg-page: #0b0a09;
+  --bg-surface: #141210;
+  --bg-card: #1a1714;
+  --border-subtle: #252018;
+  --text-primary: #f0ebe0;
+  --text-muted: #8a8070;
+  --text-subtle: #4a4438;
+  --accent-orange: #f97316;
+  --accent-glow: rgba(249, 115, 22, 0.25);
+}
+
+html,
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+* {
+  box-sizing: border-box;
 }
