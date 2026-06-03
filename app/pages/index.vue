@@ -73,7 +73,7 @@ const features = [
           variant="ghost"
           color="neutral"
           size="sm"
-          to="https://github.com"
+          to="https://github.com/vhoyer/fontutils.vhoyer.dev"
           target="_blank"
           leading-icon="i-heroicons-code-bracket"
         >
