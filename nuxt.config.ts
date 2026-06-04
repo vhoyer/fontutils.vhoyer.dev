@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const isProd = process.env.NODE_ENV === 'production'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -16,12 +18,12 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Mono:wght@400;500&family=Quicksand:wght@300;400;500;600;700&display=swap',
         },
       ],
-      script: [
+      script: isProd ? [
         { src: 'https://www.googletagmanager.com/gtag/js?id=G-5VZYSXHDG0', async: true },
         {
           innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VZYSXHDG0');`,
         },
-      ],
+      ] : [],
     },
   },
 })
