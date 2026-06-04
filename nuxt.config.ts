@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const isProd = process.env.NODE_ENV === 'production'
+const GA_ID = 'G-5VZYSXHDG0'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -19,9 +20,9 @@ export default defineNuxtConfig({
         },
       ],
       script: isProd ? [
-        { src: 'https://www.googletagmanager.com/gtag/js?id=G-5VZYSXHDG0', async: true },
+        { src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, async: true },
         {
-          innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5VZYSXHDG0');`,
+          innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
         },
       ] : [],
     },
